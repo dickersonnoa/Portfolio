@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="2025 FIRST Robotics climber project by Noah Dickerson.">
+  <meta name="description" content="2025 FIRST Robotics deep-cage climber design case study by Noah Dickerson.">
   <title>2025 FRC Climber | Noah Dickerson</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -21,14 +21,15 @@
   </header>
 
   <main>
-    <section class="project-hero">
+    <section class="project-hero project-hero-case-study">
       <div class="container">
         <a class="back-link" href="../index.html#projects">← Back to projects</a>
-        <p class="eyebrow">FIRST Robotics · 2025</p>
-        <h1>Competition Robot Climber</h1>
+        <p class="eyebrow">FIRST Robotics · 2025 REEFSCAPE</p>
+        <h1>Deep-Cage Climber</h1>
         <p class="project-summary">
-          A major robot subassembly that I worked on from early prototypes through the first competition-ready
-          design, then continued redesigning after competition exposed problems that were difficult to find beforehand.
+          I worked on this mechanism from early climber concepts through prototypes, CAD, machining,
+          assembly, competition testing, and a major redesign. The final system grew out of the problems
+          we found by actually building and competing with the first version.
         </p>
 
         <div class="project-meta">
@@ -41,86 +42,295 @@
             Autodesk Inventor
           </div>
           <div class="meta-card">
-            <strong>Environment</strong>
-            FIRST Robotics Competition
+            <strong>Team</strong>
+            Bomb Squad · FRC Team 16
+          </div>
+        </div>
+
+        <figure class="case-hero-media">
+          <img src="../images/climber/hero-v2.webp" alt="Final Bicep Climber V2 CAD assembly in Autodesk Inventor">
+          <figcaption>Final Bicep Climber V2 CAD. The design changed substantially from the first prototypes and from V1.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container project-section-grid">
+        <div>
+          <p class="eyebrow">01 · Architecture</p>
+          <h2>Deep climb was a priority from the start</h2>
+        </div>
+        <div>
+          <p>
+            One of our first decisions of the season was what capabilities mattered most. Deep climbing ranked
+            very high, so I started by looking at the general climber architecture before committing to detailed CAD.
+          </p>
+          <p>
+            Two early concepts stood out: a donut-style climb and a larger elevator-style concept. Both had things
+            I liked, but both created major system-level problems for our robot.
+          </p>
+        </div>
+      </div>
+
+      <div class="container media-grid media-grid-two concept-grid">
+        <figure class="media-card">
+          <img src="../images/climber/donut-prototype.jpg" alt="Physical prototype of an early donut-style deep cage climber">
+          <figcaption>
+            <strong>Donut prototype.</strong> This was the first climber archetype I prototyped. I liked how teams had
+            made this style work, but packaging it would have required a large opening through the frame near the
+            center of mass. We ruled it out quickly because that space was too valuable.
+          </figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img src="../images/climber/swyft-concept.webp" alt="CAD of an early elevator-style climber concept">
+          <figcaption>
+            <strong>Elevator-style concept.</strong> I liked this approach mechanically, but we were already fighting a
+            major weight problem before adding the climber. This concept was roughly 15–20 lb in our estimate, which
+            made it difficult to justify.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section project-section-alt">
+      <div class="container project-section-grid">
+        <div>
+          <p class="eyebrow">02 · Bicep V0</p>
+          <h2>Finding an architecture that fit the robot</h2>
+        </div>
+        <div>
+          <p>
+            We ended up pursuing what we called the <strong>bicep climber</strong>. I do not remember every factor that
+            went into that decision, but two were critical: it could stay light enough and I could package it inside the
+            space I was given on the robot.
+          </p>
+          <p>
+            It also gave me useful control over where the cage would end up relative to the robot after climbing. By
+            changing the geometry of the vertical supports, arms, and cage interface, I could move the final cage
+            position and work around the rest of the robot.
+          </p>
+        </div>
+      </div>
+
+      <div class="container media-grid media-grid-two">
+        <figure class="media-card">
+          <img src="../images/climber/v0-claw.webp" alt="Early Bicep Climber V0 CAD with two claw-style cage grabbers">
+          <figcaption>
+            <strong>V0.</strong> The first bicep-style version used two claw-type grabbers. It was the first iteration of
+            the architecture that eventually became the competition climber.
+          </figcaption>
+        </figure>
+
+        <figure class="media-card video-card">
+          <video controls muted playsinline preload="metadata" poster="../images/climber/v0-claw.webp">
+            <source src="../images/climber/low-rida-v0-short.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>
+            <strong>First successful lift.</strong> V0 lifting our practice drivebase, “Low Rida,” off the ground. This was
+            the first iteration of the final climber architecture that proved the basic approach could lift a robot.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="container case-subsection">
+        <div class="case-subsection-heading">
+          <p class="eyebrow">Geometry studies</p>
+          <h3>Using CAD to control where the cage ended up</h3>
+          <p>
+            I changed the climber geometry to study how the cage would settle relative to the robot. The exact arm,
+            vertical, and cage-interface geometry mattered because the mechanism had to fit the robot before, during,
+            and after the climb.
+          </p>
+        </div>
+        <div class="media-grid media-grid-two compact-media-grid">
+          <figure class="media-card">
+            <img src="../images/climber/geometry-a.webp" alt="Climber geometry study in Autodesk Inventor with dimensions">
+            <figcaption>One geometry study used to locate the cage relative to the robot.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img src="../images/climber/geometry-b.webp" alt="Second climber geometry study in Autodesk Inventor with dimensions">
+            <figcaption>A second configuration exploring a different arm and cage position.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container project-section-grid">
+        <div>
+          <p class="eyebrow">03 · Cage interface</p>
+          <h2>Replacing the claws with a harpoon</h2>
+        </div>
+        <div>
+          <p>
+            The V0 claws were terrible in practice. They did not want to open when the cage entered, and once they
+            opened they did not want to close consistently. Their position had to be nearly perfect for the mechanism
+            to work, which was not realistic for a competition robot. They were also large and bulky.
+          </p>
+          <p>
+            The replacement harpoon was inspired by another team’s concept and adapted to work with our climber.
+            It was much more forgiving: the cage could push through the barbs easily, and the barbs returned open on
+            the other side to retain it. Two rounded indentations in the barbs cradled the cage bars once engaged.
+          </p>
+        </div>
+      </div>
+
+      <div class="container single-media-wrap">
+        <figure class="media-card media-card-wide">
+          <img src="../images/climber/harpoon-prototype.jpg" alt="Early physical prototype of the harpoon cage-grabbing mechanism">
+          <figcaption>Early physical testing of the harpoon-style cage interface that replaced the V0 claws.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section project-section-alt">
+      <div class="container project-section-grid">
+        <div>
+          <p class="eyebrow">04 · V1</p>
+          <h2>From prototype to competition robot</h2>
+        </div>
+        <div>
+          <p>
+            V1 turned the bicep architecture and harpoon concept into the first complete competition design. I worked
+            through CAD, machining, assembly, and installation to get the system onto the robot for our first event.
+          </p>
+          <p>
+            The Arkansas Regional gave us operating conditions that shop testing had not. The biggest problem was in
+            the lower drivetrain: chain load bent the long lower hex shaft enough for the sprocket and chain system to
+            skip. That made lifting inconsistent.
+          </p>
+        </div>
+      </div>
+
+      <div class="container media-grid media-grid-two">
+        <figure class="media-card">
+          <img src="../images/climber/v1-cad.webp" alt="Bicep Climber V1 CAD assembly">
+          <figcaption><strong>V1 CAD.</strong> The first full competition design.</figcaption>
+        </figure>
+        <figure class="media-card portrait-media-card">
+          <img src="../images/climber/v1-installed.jpg" alt="Bicep climber installed on the competition robot in the shop">
+          <figcaption><strong>Built hardware.</strong> The mechanism installed on the robot during development.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container project-section-grid">
+        <div>
+          <p class="eyebrow">05 · V2 redesign</p>
+          <h2>Fixing the shaft-deflection problem</h2>
+        </div>
+        <div>
+          <p>
+            The biggest V2 change was the lower drivetrain. In V1, the motor was mounted outside the vertical support
+            and drove through a long shaft. In V2, I moved the motor to the inside and placed a single sprocket directly
+            next to the support vertical. That shortened the shaft dramatically and reduced the leverage the chain load
+            had to bend it.
+          </p>
+          <p>
+            Once that deflection was gone, the system stopped skipping and could lift the robot much more consistently.
+            Shortening the shaft also removed weight.
+          </p>
+        </div>
+      </div>
+
+      <div class="container media-grid media-grid-two comparison-grid">
+        <figure class="media-card comparison-card">
+          <span class="comparison-badge">V1</span>
+          <img src="../images/climber/v1-drivetrain.webp" alt="V1 lower climber drivetrain with external motor and long hex shaft">
+          <figcaption>External motor and a longer lower shaft. Chain loading could bend the shaft enough to cause skipping.</figcaption>
+        </figure>
+        <figure class="media-card comparison-card">
+          <span class="comparison-badge">V2</span>
+          <img src="../images/climber/v2-drivetrain.webp" alt="V2 lower climber drivetrain with motor moved inward and sprocket close to support">
+          <figcaption>Motor moved inward, shaft shortened, and the sprocket moved next to the support to reduce deflection.</figcaption>
+        </figure>
+      </div>
+
+      <div class="container callout case-callout">
+        <strong>The redesign addressed the failure directly.</strong>
+        V1 showed us a shaft-deflection problem under real load. V2 changed the load path instead of trying to work
+        around the symptoms, which eliminated the skipping and made the climb more repeatable.
+      </div>
+
+      <div class="container case-subsection text-only-subsection">
+        <div class="case-subsection-heading">
+          <p class="eyebrow">Support redesign</p>
+          <h3>Using the packaging change to simplify the structure</h3>
+          <p>
+            Relocating the motor meant the vertical supports had to change anyway, so I redesigned them around the
+            finalized configuration instead of carrying over V1 geometry. I removed mounting holes we no longer needed,
+            cut unnecessary material, and ended up with a lighter, cleaner final part.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section project-section-alt">
+      <div class="container project-section-grid">
+        <div>
+          <p class="eyebrow">06 · Alignment</p>
+          <h2>The cage guides became vital</h2>
+        </div>
+        <div>
+          <p>
+            Reliability was only part of the problem. The drivers still had to put a swinging cage in the right place
+            for the harpoon to engage. We added the yellow cage guides to make that alignment easier and faster.
+          </p>
+          <p>
+            The guides stayed raised during normal match play. When the climber deployed, it pushed the guides down
+            and outward with it. They were not really a change to the climber itself, but they became a vital addition
+            to the overall climbing system and made our final setup much easier to use.
+          </p>
+        </div>
+      </div>
+
+      <div class="container media-grid media-grid-two">
+        <figure class="media-card">
+          <img src="../images/climber/cage-guides-front.webp" alt="Front CAD view showing yellow cage alignment guides on the robot">
+          <figcaption>Front view of the yellow cage guides surrounding the climber opening.</figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="../images/climber/cage-guides-side.webp" alt="Side CAD view showing yellow cage alignment guides and climber">
+          <figcaption>Side view showing how the guides projected outward to funnel the cage into position.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section project-result-section">
+      <div class="container project-section-grid">
+        <div>
+          <p class="eyebrow">07 · Result</p>
+          <h2>A much more usable climbing system</h2>
+        </div>
+        <div>
+          <p>
+            The final version was not one big breakthrough. It was the result of repeatedly finding what did not work
+            and changing the design around those problems. V2 removed the shaft-deflection issue, the revised structure
+            cut unnecessary weight, and the cage guides made the mechanism much easier to line up in a match.
+          </p>
+          <div class="result-list" aria-label="Final design improvements">
+            <div><strong>More reliable</strong><span>No shaft bending or chain skipping during the lift.</span></div>
+            <div><strong>Easier to use</strong><span>Cage guides made alignment faster and more forgiving.</span></div>
+            <div><strong>Lighter</strong><span>Shorter drivetrain components and cleaner support geometry removed unnecessary weight.</span></div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="project-section">
-      <div class="container project-section-grid">
-        <div>
-          <p class="eyebrow">01 · Development</p>
-          <h2>Prototype to first competition</h2>
-        </div>
-        <div>
-          <p>
-            I prototyped and designed the climber toward the first version that was ready for competition.
-            My work included CAD, machining, assembly, and hands-on development of the mechanism.
-          </p>
-          <p>
-            The goal was not only to create a design in CAD, but to get a real mechanism built and working on
-            the competition robot.
-          </p>
-        </div>
+      <div class="container single-media-wrap final-media-wrap">
+        <figure class="media-card media-card-wide">
+          <img src="../images/climber/final-competition.jpg" alt="Bomb Squad FRC Team 16 competition robot during the 2025 season">
+          <figcaption>The 2025 competition robot. The climber evolved through prototypes, competition feedback, and redesign during the season.</figcaption>
+        </figure>
       </div>
-    </section>
 
-    <section class="project-section">
-      <div class="container project-section-grid">
-        <div>
-          <p class="eyebrow">02 · Testing</p>
-          <h2>Competition found the problems</h2>
-        </div>
-        <div>
-          <p>
-            After the team's Week 1 competition, we had real operating experience with the climber and found
-            both known and newly discovered issues. That gave me a much better picture of what needed to change
-            than shop testing alone could provide.
-          </p>
-          <div class="callout">
-            The important part of this project was the iteration: the first competition-ready design was not treated
-            as the end of the design process.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-section">
-      <div class="container project-section-grid">
-        <div>
-          <p class="eyebrow">03 · Redesign</p>
-          <h2>Iterating through competition season</h2>
-        </div>
-        <div>
-          <p>
-            During competition season I continued redesigning the climber to address the issues we found.
-            We tested the redesigned mechanism and found it to be more reliable, easier to use, and lighter.
-          </p>
-          <p>
-            That process carried the climber from the early prototype stage through multiple real-world revisions
-            into the final configuration used later in the season.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-section">
-      <div class="container project-section-grid">
-        <div>
-          <p class="eyebrow">04 · What this project shows</p>
-          <h2>Design is an iterative process</h2>
-        </div>
-        <div>
-          <ul>
-            <li>Turning prototypes into manufacturable mechanical hardware</li>
-            <li>Using CAD as part of a build-test-redesign loop</li>
-            <li>Machining and assembling the parts I was designing</li>
-            <li>Learning from failures and problems found in actual competition</li>
-            <li>Improving a mechanism instead of treating the first working version as finished</li>
-          </ul>
-        </div>
+      <div class="container project-credit">
+        <p>
+          <strong>Team project:</strong> This mechanism was developed as part of Bomb Squad, FRC Team 16. This case study
+          focuses on the climber work I personally contributed to within the larger robot and team effort.
+        </p>
       </div>
     </section>
   </main>
