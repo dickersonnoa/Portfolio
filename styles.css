@@ -481,3 +481,206 @@ footer {
     flex-direction: column;
   }
 }
+
+
+/* Climber case study */
+.project-hero-case-study {
+  padding-bottom: 72px;
+}
+
+.case-hero-media {
+  margin: 42px 0 0;
+}
+
+.case-hero-media img,
+.media-card img,
+.media-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e7e8e5;
+}
+
+.case-hero-media img {
+  max-height: 660px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.case-hero-media figcaption,
+.media-card figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.project-section-alt {
+  background: var(--surface-alt);
+}
+
+.media-grid {
+  display: grid;
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.media-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.media-card {
+  position: relative;
+  margin: 0;
+}
+
+.media-card img,
+.media-card video {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.media-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.concept-grid .media-card img {
+  aspect-ratio: 16 / 10;
+}
+
+.portrait-media-card img {
+  object-position: center;
+}
+
+.video-card video {
+  aspect-ratio: 9 / 16;
+  max-height: 720px;
+  object-fit: contain;
+  background: #111;
+}
+
+.case-subsection {
+  margin-top: 60px;
+  padding-top: 34px;
+  border-top: 1px solid var(--line);
+}
+
+.case-subsection-heading {
+  max-width: 760px;
+}
+
+.case-subsection-heading h3 {
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+}
+
+.case-subsection-heading > p:last-child {
+  color: var(--muted);
+}
+
+.compact-media-grid {
+  margin-top: 26px;
+}
+
+.single-media-wrap {
+  margin-top: 38px;
+}
+
+.media-card-wide {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-card-wide img {
+  aspect-ratio: auto;
+  max-height: 720px;
+  object-fit: contain;
+}
+
+.comparison-card {
+  padding-top: 0;
+}
+
+.comparison-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 5px 9px;
+  color: #fff;
+  background: rgba(27, 29, 31, 0.9);
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.case-callout {
+  margin-top: 42px;
+  max-width: 900px;
+}
+
+.case-callout strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.text-only-subsection {
+  max-width: 900px;
+}
+
+.result-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.result-list > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.result-list strong {
+  color: var(--text);
+}
+
+.result-list span {
+  color: var(--muted);
+}
+
+.final-media-wrap {
+  margin-top: 46px;
+}
+
+.project-credit {
+  max-width: 900px;
+  margin-top: 38px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.project-credit p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 820px) {
+  .media-grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card video {
+    max-height: 640px;
+  }
+
+  .result-list > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
