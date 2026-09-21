@@ -27,4 +27,4 @@ The climber case study is organized around the engineering process:
 
 **Prototype → initial competition design → competition testing → issues found → redesign → final result**
 
-This site intentionally keeps Danfoss work high-level because manufacturing details may be proprietary.
+The public portfolio is focused on projects where I can show the actual design process, hardware, and results.
